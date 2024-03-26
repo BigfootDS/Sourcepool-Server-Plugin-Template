@@ -1,4 +1,5 @@
-console.log(`Sourcepool plugin ${process.env.npm_package_name} loading.`);
+const scopedPackageJson = require('../package.json');
+console.log(`Sourcepool plugin ${scopedPackageJson.name} started loading.`);
 
 
 console.debug(JSON.stringify({
@@ -7,4 +8,9 @@ console.debug(JSON.stringify({
 	serverPluginsDirectory: global.serverPlugins || "No server plugins path available."
 }, null, 4));
 
-console.log(`Sourcepool plugin ${process.env.npm_package_name} completed loading.`)
+
+const cowsay = require("cowsay");
+console.log(cowsay.say({text:"Hello, I'm a cow!"}));
+
+
+console.log(`Sourcepool plugin ${scopedPackageJson.name} completed loading.`)
