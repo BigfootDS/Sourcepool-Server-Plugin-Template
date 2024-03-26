@@ -32,7 +32,7 @@ jobs:
 
     - name: Bump package.json version
       id: npm-version
-      uses: reedyuk/npm-version@1.2.2
+      uses: reedyuk/npm-version@master
       with:
         version: ${{ steps.tag.outputs.new_version }}
 
