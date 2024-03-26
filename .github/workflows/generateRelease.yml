@@ -61,18 +61,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.draft_release.outputs.semver_commit_hash }}
 
       - name: Set up NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
 
       - name: Upload Output to Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.draft_release.outputs.release_version }}
           draft: true
@@ -83,10 +83,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout GitHub Action
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Mark release as published
-      uses: eregon/publish-release@v1.0.3
+      uses: eregon/publish-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
