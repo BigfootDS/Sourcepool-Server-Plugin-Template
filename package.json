@@ -1,10 +1,10 @@
 {
   "name": "your-plugin-name-here",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Template for developers and creators to work on their own plugins for the Sourcepool Server.",
   "author": "Your Name Here",
   "sourcepool": {
-    "sourceUrl":"https://github.com/YourGitHubAccount/YourPluginRepository",
+    "sourceUrl": "https://github.com/YourGitHubAccount/YourPluginRepository",
     "thumbnailImageFilePath": "./thumbnail.png",
     "headerImageFilePath": "./header.png",
     "descriptionsBrief": [
